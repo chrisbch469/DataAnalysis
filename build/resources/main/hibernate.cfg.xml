@@ -1,0 +1,23 @@
+<hibernate-configuration>
+    <session-factory>
+
+        <!--Database Connection Settings-->
+        <property name="connection.driver_class">org.h2.Driver</property>
+        <property name="connection.url">jdbc:h2:./data/worldbank</property>
+        <property name="hibernate.connection.username">sa</property>
+
+        <!--SQL Dialect-->
+        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
+
+        <!--Update Database Schema on Startup-->
+        <property name="hbm2ddl.auto">update</property>
+
+        <!--Show Queries prepared by hibernate-->
+        <!--<property name="show_sql">true</property>-->
+
+        <!--Names the annotated entity class  -->
+        <mapping class="com.chrisboich.data_analysis.model.model.Country"/>
+
+
+    </session-factory>
+</hibernate-configuration>
